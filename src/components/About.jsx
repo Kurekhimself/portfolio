@@ -21,6 +21,17 @@ export default function About() {
     return () => observer.disconnect()
   }, [])
 
+  // Obfuscated email parts (replace `MeinEchterName` with your real Gmail username)
+  const emailUser = 'kureklaurenz+portfolio'
+  const emailDomain = 'gmail'
+  const emailTld = 'com'
+
+  const handleEmailClick = (e) => {
+    e.preventDefault()
+    const addr = `${emailUser}@${emailDomain}.${emailTld}`
+    window.location.href = `mailto:${addr}`
+  }
+
   const stats = [
     { num: '3+', label: 'Jahre Erfahrung' },
     { num: '5+', label: 'Projekte' },
