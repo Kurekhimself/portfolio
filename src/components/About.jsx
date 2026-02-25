@@ -35,7 +35,7 @@ export default function About() {
   const stats = [
     { num: '3+', label: 'Jahre Erfahrung' },
     { num: '5+', label: 'Projekte' },
-    { num: '100%', label: 'Leidenschaft' },
+    { num: '1', label: 'Person' },
   ]
 
   return (
