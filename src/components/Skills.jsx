@@ -38,7 +38,8 @@ const skillCategories = [
 
 const tools = [
   'VS Code', 'GitHub', 'Figma', 'WordPress',
-  'Chrome DevTools', 'Notion', 'Docker', 'phpMyAdmin', 'FileZilla' , 'tailwindcss',
+  'Chrome DevTools', 'Docker', 'phpMyAdmin', 'FileZilla' , 'tailwindcss', 'phpstorm',
+  'IntelliJ IDEA','XAMPP', 'C-Panel', 
 ]
 
 function SkillBar({ name, level, color, index }) {
