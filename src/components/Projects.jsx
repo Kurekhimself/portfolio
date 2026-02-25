@@ -9,7 +9,7 @@ const projects = [
     tags: ['JavaScript', 'PHP', 'Local Storage', 'PWA'],
     color: '#ff4d6d',
     icon: '🧾',
-    links: { github: '#', live: '#' },
+    links: { github: 'https://kurekhimself.github.io/KasseTT/', live: '#' },
   },
   {
     id: '02',

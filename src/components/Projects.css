@@ -44,6 +44,7 @@
   background: radial-gradient(circle at 50% 0%, var(--card-color, var(--accent2)) 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
 .project-card:hover {
