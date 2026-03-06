@@ -19,7 +19,6 @@ function Home() {
       <About />
       <Projects />
       <Skills />
-      <Testimonials />
     </>
   )
 }
