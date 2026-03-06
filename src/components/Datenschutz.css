@@ -1,0 +1,32 @@
+.datenschutz {
+  padding: 6rem 0;
+  background: var(--bg2);
+}
+
+.datenschutz-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.datenschutz-section {
+  margin-bottom: 2rem;
+}
+
+.datenschutz-section h3 {
+  color: var(--accent);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.datenschutz-section h4 {
+  color: var(--accent2);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.datenschutz-section p {
+  line-height: 1.6;
+  color: var(--text);
+}

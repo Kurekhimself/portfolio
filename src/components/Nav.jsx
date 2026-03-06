@@ -1,15 +1,18 @@
 import { useState, useEffect } from 'react'
+import { useTheme } from '../contexts/ThemeContext'
 import './Nav.css'
 
 const links = [
   { label: 'Über mich', href: '#about' },
   { label: 'Projekte', href: '#projects' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Testimonials', href: '#testimonials' },
 ]
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const { isDark, toggleTheme } = useTheme()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60)
@@ -37,13 +40,23 @@ export default function Nav() {
           ))}
         </ul>
 
-        <button
-          className={`nav-burger${menuOpen ? ' open' : ''}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
-        >
-          <span /><span /><span />
-        </button>
+        <div className="nav-actions">
+          <button
+            className={`theme-toggle ${isDark ? 'dark' : 'light'}`}
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            <span className="toggle-slider"></span>
+          </button>
+
+          <button
+            className={`nav-burger${menuOpen ? ' open' : ''}`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+          >
+            <span /><span /><span />
+          </button>
+        </div>
       </div>
     </nav>
   )

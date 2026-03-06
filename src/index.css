@@ -18,6 +18,18 @@
   --font-mono: 'DM Mono', monospace;
 }
 
+.light {
+  --bg: #f8f9fa;
+  --bg2: #e9ecef;
+  --surface: #ffffff;
+  --border: #dee2e6;
+  --accent: #dc3545;
+  --accent2: #6f42c1;
+  --accent3: #28a745;
+  --text: #212529;
+  --text-muted: #6c757d;
+}
+
 html {
   scroll-behavior: smooth;
 }

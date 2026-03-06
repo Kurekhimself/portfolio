@@ -1,0 +1,25 @@
+.impressum {
+  padding: 6rem 0;
+  background: var(--bg);
+}
+
+.impressum-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.impressum-section {
+  margin-bottom: 2rem;
+}
+
+.impressum-section h3 {
+  color: var(--accent);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.impressum-section p {
+  line-height: 1.6;
+  color: var(--text);
+}
