@@ -6,19 +6,16 @@ const testimonials = [
     name: 'Max Mustermann',
     role: 'Vereinsvorstand TSG Move & Dance',
     text: 'Laurenz hat unsere Website komplett überarbeitet und ein professionelles E-Commerce-System implementiert. Die Mitglieder lieben die neue Benutzerfreundlichkeit!',
-    avatar: '👤',
   },
   {
     name: 'Anna Schmidt',
     role: 'Projektmanagerin',
     text: 'Das Kassensystem für den Weihnachtsmarkt läuft einwandfrei. Laurenz denkt immer einen Schritt voraus und optimiert Prozesse effizient.',
-    avatar: '👩‍💼',
   },
   {
     name: 'Thomas Weber',
     role: 'Geschäftsführer',
     text: 'Von der Idee bis zur Umsetzung – Laurenz liefert zuverlässig und kreativ. Unsere digitale Transformation war ein voller Erfolg.',
-    avatar: '👨‍💼',
   },
 ]
 
@@ -47,9 +44,6 @@ function TestimonialCard({ testimonial, index }) {
       className="testimonial-card reveal"
       style={{ transitionDelay: `${index * 0.2}s` }}
     >
-      <div className="testimonial-avatar">
-        {testimonial.avatar}
-      </div>
       <div className="testimonial-content">
         <p className="testimonial-text">"{testimonial.text}"</p>
         <div className="testimonial-author">

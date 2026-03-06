@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import Hero from './components/Hero'
 import About from './components/About'
 import Projects from './components/Projects'
@@ -11,10 +12,27 @@ import BackToTop from './components/BackToTop'
 import { ThemeProvider } from './contexts/ThemeContext'
 import './App.css'
 
+function Home() {
+  return (
+    <>
+      <Hero />
+      <About />
+      <Projects />
+      <Skills />
+      <Testimonials />
+    </>
+  )
+}
+
 function App() {
   const cursorRef = useRef(null)
   const ringRef = useRef(null)
   const [hovering, setHovering] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [location.pathname])
 
   useEffect(() => {
     const moveCursor = (e) => {
@@ -46,22 +64,20 @@ function App() {
       <div ref={ringRef} className="cursor-ring" />
       <Nav />
       <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Skills />
-        <Testimonials />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
+        </Routes>
       </main>
-      <Impressum />
-      <Datenschutz />
       <footer className="footer">
         <div className="container">
           <div className="footer-inner">
             <div className="footer-left">
               <span className="footer-mono">© 2025 — Kurek</span>
               <div className="footer-links">
-                <a href="#impressum" className="footer-link">Impressum</a>
-                <a href="#datenschutz" className="footer-link">Datenschutz</a>
+                <Link to="/impressum" className="footer-link">Impressum</Link>
+                <Link to="/datenschutz" className="footer-link">Datenschutz</Link>
               </div>
             </div>
             <div className="footer-right">
